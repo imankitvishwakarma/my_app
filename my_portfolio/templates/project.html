@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block contant %}
+ <!-- my projects -->
+ <section id="projects" class="reviews">
+    <div class="container">
+    <h1 class="section-heading"><span>My</span> projects</h1>
+    <p>I provide high standar clean website for your buisness solutions</p>
+
+   <div class="slider">
+    {% for j in projectdata %}
+       <div class="slide">
+           <img src="{{ j.project_img.url }}" alt="logo">
+           <p>{{ j.project_p }}</p>
+                <button class="btn btn-primary"><a href="https://ankitvish143.github.io/projection-website-r/">{{ j.project_btn }}</a></button>
+       </div>                  
+    {% endfor %} 
+    </div>
+<div class="slider-dots">
+
+</div>
+    </div>
+</section>
+{% endblock %}
