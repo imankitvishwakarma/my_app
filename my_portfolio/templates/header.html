@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Portfolio</title>
+        <script src="https://kit.fontawesome.com/c4f2cac62a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/static/style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400;1,700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    </head>
+    <body>
+   <!-- hamberger -->
+        <div class="site-main-wrapper">
+            <button class="hamberger">
+                <img src="/static/image/hamberger.svg">
+            </button>
+            <div class="mobile-nav">
+                <button class="times"><img src="/static/image/times.svg" alt="" ></button>
+                <ul>
+                    <li class="home"><a href="{% url 'home' %}">Home</a></li>
+                    <li class="about"><a href="{% url 'about' %}">About</a></li>
+                    <li class="skill"><a href="{% url 'skill' %}">Skills</a></li>
+                    <li class="project"><a href="{% url 'project' %}">Project</a></li>
+                </ul>
+            </div>
+        
+   <!-- nav bar -->
+            <header>
+            <div class="container">
+                <div class="z left flex items-center justify-between">
+                    <div class="branding">
+                       <img src="/static/image/my-logo.png" alt="#">
+                    </div>  
+                    <div class="left1">
+                        <ul>
+                            <li><a href="{% url 'home' %}">Home</a></li>
+                            <li><a href="{% url 'about' %}">About</a></li>  
+                            <li><a href="{% url 'skill' %}">Skills</a> </li>   
+                            <li><a href="{% url 'project' %}">Project</a></li>      
+                        </ul>                                         
+                    </div>              
+                <div class="right">
+                    <button class="btn btn-primary"><a href="#Contact">Contact</a></button>
+                </div>
+            </div>
+             <!--I,m a webdeveloper  -->
+             <div class="hero flex items-center justify-between">    
+                <div class="left flex-1 justify-center hide">
+                    <img src="/static/image/picsart.png">
+                </div>
+           <div id="home" class="right flex-1 web">
+                    <h1>Hi, my name is <span>Ankit Vishwakarma</span><br>
+                    I'm a Python Developer</h1>
+                 <div>
+                     <a href="#about-me"><button class="btn btn-secondary">Know more</button></a>
+                </div>   
+           </div>
+           </div>
+           </div> 
+           </header>

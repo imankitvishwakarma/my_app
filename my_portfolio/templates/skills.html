@@ -1,0 +1,23 @@
+<!-- my skills -->
+{% extends "base.html" %}
+{% block contant %}
+<section id="skills" class="services">
+    <div class="container">
+    <h1 class="section-heading"><span>My</span> Skills</h1>
+    <p>I provide high standar clean website for your buisness solutions</p>
+    <div class="card-wrapper">
+     {% for i in skillsdata %}
+        <div class="card">
+            <img src="{{ i.skill_logo.url }}">
+            <h2>{{ i.skill_heading }}</h2>
+            <p>{{ i.skill_detail }}<br></p>
+            <div class="percentage html">
+            <p><span>{{ i.skill_perce }}</span></p>
+        </div>
+     </div>
+     {% endfor %}
+     </div>
+     </div>
+ </div>
+</section>
+{% endblock %}
