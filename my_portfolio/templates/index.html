@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block contant %}
+    <!-- about me -->
+            <section id="about-me" class="about">
+                {% for l in aboutmedata %}
+                <div class="container flex items-centeru about-inner-wrap">
+                    
+                    <div class="left flex-1 justify-center">
+                        <img class="about-me-img" src="{{ l.about_img.url }}" alt="">
+                    </div>
+                    
+                    <div class="flex-1 im">
+                        <h1>About <span>Me</span></h1>
+                        <h3>Hello i'm Ankit Vishwakarma</h3>       
+                        <p>An Open-Source Enthusiast who is a Full-Time learner and a passionate Python Developer. I am an graduate of B.Tech with specialization in Python Developer</p> 
+                        <a href="{{ l.about_resume.url }}"><button class="btn btn-secondary">View Resume</button></a>
+                    </div>
+                </div>
+                {% endfor %}
+            </section>
+   <!-- my skills -->
+                <section id="skills" class="services">
+                       <div class="container">
+                       <h1 class="section-heading"><span>My</span> Skills</h1>
+                       <p>I provide high standar clean website for your buisness solutions</p>
+                       <div class="card-wrapper">
+                        {% for i in skillsdata %}
+                           <div class="card">
+                               <img src="{{ i.skill_logo.url }}" alt="logo">
+                               <h2>{{ i.skill_heading }}</h2>
+                               <p>{{ i.skill_detail }}<br></p>
+                            <div class="percentage">    
+                               <p style="background:#3dcfd3; width:{{ i.skill_perce }};"><span>{{ i.skill_perce }}</span></p>
+                            </div>
+                             </div>
+                        {% endfor %}
+                        </div>
+                        </div>
+                    </div>
+                </section>
+      <!-- my projects -->
+                <section id="projects" class="reviews">
+                    <div class="container">
+                    <h1 class="section-heading"><span>My</span> projects</h1>
+                    <p>I provide high standar clean website for your buisness solutions</p>
+    
+                   <div class="slider">
+                    {% for j in projectdata %}
+                       <div class="slide">
+                           <img src="{{ j.project_img.url }}" alt="logo">
+                           <p>{{ j.project_p }}</p>
+                                <button class="btn btn-primary"><a href="https://ankitvish143.github.io/projection-website-r/">{{ j.project_btn }}</a></button>
+                       </div>                  
+                    {% endfor %} 
+                    </div>
+                <div class="slider-dots">
+
+                </div>
+                    </div>
+                </section>
+    <!-- I am Available for freelancer -->
+                <section class="freelancer">
+                    <h1>I am Available for<span> freelancer</span></h1>
+                    <h2><span>DON'T</span> BE SHY !</h2>
+                    <p>Feel free to get in touch with me. I am always open to discussing
+                         new projects, creative ideas or opportunities to be part of your visions.</p>  
+                         
+                </section> 
+    <!-- contact us -->
+                <section id="Contact" class="contact">
+                        <div class="container">
+                      <h1 class="section-heading">Contact <span>Us</span></h1>
+                       <p>I provide high standar clean website for your buisness solutions</p>
+                        <div class="card-wrapper">
+                        <div class="card">
+                            <a href=""><img src="./static/image/phone-logo3.png"></a>
+                               <h1>Call Us On</h1>
+                               <h6><a href="">7509828740</a></h6>
+                        </div>
+                        <div class="card">   
+                            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank"><img src="./static/image/email-logo.png"></a>
+                            <h1>Email us At</h1>    
+                            <h6><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">vishankit143@gmail.com</a></h6>
+                        </div>
+                        <div class="card">
+                            <a href="https://www.google.co.in/maps/" target="_blank"><img src="./static/image/office-icon.png"></a>
+                            <h1>Visit Office</h1>
+                            <h6><a href="https://www.google.co.in/maps/" target="_blank">60, Shrinagar Colony, Dewas (M.P)</a></h6>
+                        </div>
+                        </div>                      
+    
+                      <form>
+                        <div class="input-wrap">
+                            <input type="text" placeholder="Your Name">
+                            <input type="text" placeholder="Your Email">
+                        </div>
+
+                        <div class="input-wrap-2">
+                         <input type="text" placeholder="Your Subject...">
+                         <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
+                        </div>
+                          <div class="btn-wrapper">
+                              <button class="btn btn-primary">Send Message</button>
+                          </div>
+                      </form>
+                    </div>
+          </section>
+{% endblock %}     
